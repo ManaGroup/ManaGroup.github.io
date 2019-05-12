@@ -1,0 +1,35 @@
+@import "general";
+@import "./color";
+@import "./mixins";
+.App {
+  .main-container {}
+}
+.st-width{
+  //627 313
+  position: relative;
+  width: 630px;
+}
+.st2-width{
+  //627 313
+  position: relative;
+  width: 315px;
+}
+.st3-width{
+  //627 313
+  position: relative;
+  width: 210px;
+}
+.triangle-white{
+  fill: rgb(255, 255, 255);
+  stroke-width: 8;
+}
+.triangle-blue{
+  fill: #1862b5;
+  stroke-width: 8;
+}
+.qsbr{
+  font-family: QSBR;
+}
+.debussy{
+  font-family: Debussy;
+}
