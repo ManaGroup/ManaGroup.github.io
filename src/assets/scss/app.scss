@@ -7,7 +7,7 @@
 .st-width{
   //627 313
   position: relative;
-  width: 630px;
+  width: 500px;
 }
 .st2-width{
   //627 313
@@ -29,7 +29,25 @@
 }
 .qsbr{
   font-family: QSBR;
+  line-height: 35px;
+}
+.qsbrBold{
+  font-family: QSBRBold;
 }
 .debussy{
   font-family: Debussy;
+}
+.p-20{
+  padding: 20px;
+}
+.home{
+  overflow: hidden;
+}
+.inputs{
+  padding: 10px;
+  margin: 5px;
+  width:344px !important;
+  height:76px !important;
+  border-radius: 5px;
+  border-width: 0px;
 }

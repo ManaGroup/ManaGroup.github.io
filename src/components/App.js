@@ -15,7 +15,7 @@ class App extends BaseComponent {
         return (
             <div className="App">
                 <div className="main-container">
-                    <div className="container">
+                    <div className="">
                         <Switch>
                             <Route exact path={"/"}     render={() => (<Home/>)}/>
                             <Route       path={"*"}     render={() => (<NotFound/>)}/>
