@@ -101,8 +101,6 @@ class Home extends BaseComponent {
                         </p>
                     </div>
 
-                    <_UX/>
-
                     <Service
                         title={`Software Development`}
                         description={`Dont mind the tk,tk,tk sound, its just our developers working super hard to bring your ideas to reality.`}
