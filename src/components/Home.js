@@ -52,7 +52,12 @@ class Home extends BaseComponent {
                             <p className='qsbr' style={{fontSize:'30px',marginTop: '-15px'}}>
                                 Not Just a Fancy Word
                             </p>
-                            <input className='qsbr' type="button" value="Tell Me More" style={{
+                            <input 
+                            onClick={()=>{
+                                window.location='#our_service'
+                            }}
+                            
+                            className='qsbr' type="button" value="Tell Me More" style={{
                                 borderRadius: '5px',
                                 border: 'none',
                                 backgroundColor: 'rgb(201, 152, 103)',
@@ -75,7 +80,7 @@ class Home extends BaseComponent {
                     </svg>
                 </div>
                 {/* pakt */}
-                <div className="p-20 container">
+                <div id="our_service" className="p-20 container">
                     <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
                         <p style={{fontSize:'50px'}}>
                         WE ARE HERE TO MAKE A PACT
