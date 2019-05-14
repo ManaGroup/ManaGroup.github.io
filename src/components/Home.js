@@ -13,9 +13,13 @@ import ManaBgBrown  from '../assets/images/dekstop/mana-bg-brown.svg'
 
 
 import Service_UI from '../assets/images/dekstop/ui.svg'
+import _UI from '../assets/images/dekstop/ui.js'
 import Service_UX from '../assets/images/dekstop/ux.svg'
+import _UX from '../assets/images/dekstop/ux.js'
 import Service_DV from '../assets/images/dekstop/develop.svg'
+import _DV from '../assets/images/dekstop/develop.js'
 import Service_VP from '../assets/images/dekstop/voip.svg'
+import _VP from '../assets/images/dekstop/voip.js'
 
 import Service from './Service'
 
@@ -97,36 +101,37 @@ class Home extends BaseComponent {
                         </p>
                     </div>
 
+                    <_UX/>
 
                     <Service
                         title={`Software Development`}
                         description={`Dont mind the tk,tk,tk sound, its just our developers working super hard to bring your ideas to reality.`}
                         bg={ManaBgBlue}
-                        image={Service_DV}
+                        image={_DV}
 
                     />
 
-                    <Service
+                     <Service
                         title={`User Exprience Design`}
                         description={`Fun Fact: every dollar invested in UX returns $10 to $100. SO… DONT EVEN RISK IT. Your users deserve an experience as easy and fun as your product. `}
-                        image={Service_UX}
+                        image={_UX}
                         flip
                     />
                     
                     <Service
                         title={`User Interface Design`}
                         description={`Another Fun Fact: the first judgment always comes from the look of things. make your first impression count by creating a beautiful and intuitive product.`}
-                        image={Service_UI}
+                        image={_UI}
                         
                     />
-                    <Service
+                     <Service
                         title={`VoIP Solutions `}
                         description={`E-commerce sale is hard. Analyics, rates, ROl and etc. Don’t worry though, you dont have to do it alone. we got you covered. after all thats what friends are for.  `}
-                        image={Service_VP}
+                        image={_VP}
                         bg={ManaBgBrown}
                         flip
                         flipBg
-                    />
+                    />  
                     
                 </div>
                 
@@ -148,11 +153,11 @@ class Home extends BaseComponent {
                         </div>
                         <div style={{width:'500px'}}>
                             <div style={{display:'flex',flexDirection:'row'}}>
-                                <input className="inputs" type="text" value="" placeholder="Your Name" />
-                                <input className="inputs" type="text" value="" placeholder="Your Phone Number" />
+                                <input id="name" className="inputs" type="text"  placeholder="Your Name" />
+                                <input id="phone" className="inputs" type="text"  placeholder="Your Phone Number" />
                             </div>
                             <div style={{display:'flex',flexDirection:'row',paddingTop:'20px'}}>
-                                <input  type="text" value="" placeholder="Your Email Address" 
+                                <input id="email" type="text"  placeholder="Your Email Address *" 
                                 style={{
                                     padding: '10px',
                                     margin: '5px',
@@ -162,8 +167,30 @@ class Home extends BaseComponent {
                                     borderWidth: '0px',
                                 
                                 }} />
-                                <input className="inputs" type="button" value="Send" style={{
-                                    
+                                <input 
+                                
+                                onClick={()=>{
+                                    if(
+                                        !document.getElementById('email').value 
+                                    ){
+                                        alert('please fill all form data ')
+                                        return ;
+                                    }
+                                    fetch('https://5.160.25.147:1414/api/register/email',{
+                                        method:'POST',
+                                        body:JSON.stringify({
+                                            email:
+                                            
+                                            document.getElementById('name').value+":"+
+                                            document.getElementById('phone').value+":"+
+                                            document.getElementById('email').value
+                                        })
+                                    })
+                                }}
+                                className="inputs" 
+                                type="button" 
+                                value="Send" 
+                                style={{
                                         borderRadius: '5px',
                                         border: 'none',
                                         backgroundColor: 'rgb(201, 152, 103)',
