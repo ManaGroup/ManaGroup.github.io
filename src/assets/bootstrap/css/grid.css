@@ -27,7 +27,7 @@ html {
   margin-right: auto;
   margin-left: auto;
 }
-@media (min-width: 576px) {
+/* @media (min-width: 576px) {
   .container {
     max-width: 540px;
   }
@@ -41,7 +41,7 @@ html {
   .container {
     max-width: 960px;
   }
-}
+} */
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;

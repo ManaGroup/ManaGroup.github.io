@@ -62,7 +62,7 @@ class Home extends BaseComponent {
                             }}/>
                         </div>
                         <div className={"st-width"}>
-                            <img  src={Banner} alt="" />
+                            <img className={"st-width"} src={Banner} alt="" />
                         </div>
                        
                     </div>
@@ -79,11 +79,11 @@ class Home extends BaseComponent {
                     </div>
                     <div className="qsbr" style={{display:'flex',flexDirection:'row',}} >
                         <div className={"st-width"}>
-                            <img  src={About} alt="" />
+                            <img className={"st-width"} src={About} alt="" />
                         </div>
                         <div className={"st-width"}>
-                            <img  src={ManaBgBrown} alt="" style={{position:'absolute',right:'0px',top:`${_WITH_/3}px`}} />
-                            <p style={{fontSize:'15px',margin:'50px',width:'500px',textAlign:'left'}}>
+                            <img className={"st-width"} src={ManaBgBrown} alt="" style={{position:'absolute',right:'0px',top:`${_WITH_/3}px`}} />
+                            <p style={{lineHeight:'30px',fontSize:'15px',margin:'50px',width:'500px',textAlign:'left'}}>
                             You probably have witnessed the digital age, changing every aspect of our lives (or at least you have heard about it, right?). Before this era, Businesses had to try out all the time and budget consuming ways to reach, attract and satisfy customers, and customers also struggled with finding the right product or service, that is just made for them and their needs. Today customers has several options availabe to them on online platforms, that allow them to compare and make a better decision, if a business is not online, then its not an option. Mana Group helps you to step towards digitalization and use innovation and technlogy to enhance your business. We call our method of working, “Proffesual” as in, “Proffesionally casual”. Let’s start a journy towards digital transformation together and we guarantee we will stick to you, ups and downs, thick and thin.
                             </p>
                         </div>
@@ -144,7 +144,7 @@ class Home extends BaseComponent {
                     </div>
                     <div style={{display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
                         <div style={{width:'444px'}}>''
-                            <img src={Contact} alt=".." />
+                            <img style={{width:'444px'}} src={Contact} alt=".." />
                         </div>
                         <div style={{width:'500px'}}>
                             <div style={{display:'flex',flexDirection:'row'}}>
