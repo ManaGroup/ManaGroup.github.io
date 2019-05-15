@@ -54,7 +54,7 @@ class Home extends BaseComponent {
                             </p>
                             <input 
                             onClick={()=>{
-                                window.location='#our_service'
+                                window.location='#pact'
                             }}
                             
                             className='qsbr' type="button" value="Tell Me More" style={{
@@ -80,7 +80,7 @@ class Home extends BaseComponent {
                     </svg>
                 </div>
                 {/* pakt */}
-                <div id="our_service" className="p-20 container">
+                <div id="pact" className="p-20 container">
                     <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
                         <p style={{fontSize:'50px'}}>
                         WE ARE HERE TO MAKE A PACT
@@ -188,6 +188,8 @@ class Home extends BaseComponent {
                                             document.getElementById('phone').value+":"+
                                             document.getElementById('email').value
                                         })
+                                    }).then(()=>{
+                                        alert('Your Email Has Been Send. :)')
                                     })
                                 }}
                                 className="inputs" 
