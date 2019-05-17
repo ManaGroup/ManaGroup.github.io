@@ -54,3 +54,44 @@
 p{
   line-height: 1;
 }
+
+.d-f-c-c{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 0px) {
+  .container {
+    max-width: 540px;
+  }
+  .d-f-c-c{
+    flex-direction: column
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .d-f-c-c{
+    flex-direction: column
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  .d-f-c-c{
+    flex-direction: column
+  }
+} 
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  .d-f-c-c{
+    flex-direction: row
+  }
+
+}
+

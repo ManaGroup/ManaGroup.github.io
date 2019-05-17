@@ -17,7 +17,7 @@ class App extends Component {
         const {toggle}= this.state;
         return (
 
-            <svg width="446px" height="472px" viewBox="0 0 446 472" version="1.1" >
+            <svg width="100%" viewBox="0 0 446 472" version="1.1" >
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="Desktop-HD-Copy-2" transform="translate(-832.000000, -3119.000000)">
                         <g id="Group-7" transform="translate(737.433340, 3028.982323)">

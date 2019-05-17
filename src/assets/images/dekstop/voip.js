@@ -17,7 +17,7 @@ class App extends Component {
     render() {
         const { toggle } = this.state;
         return (
-            <svg width="529px" height="525px" viewBox="0 0 529 525" version="1.1" >
+            <svg width="100%" viewBox="0 0 529 525" version="1.1" >
                 <title>Group 14</title>
                 <desc>Created with Sketch.</desc>
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

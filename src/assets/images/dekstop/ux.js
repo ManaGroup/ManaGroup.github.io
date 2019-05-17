@@ -19,7 +19,7 @@ class App extends Component {
         return (
 
 
-            <svg width="528px" height="453px" viewBox="0 0 528 453" version="1.1" >
+            <svg width="100%"  viewBox="0 0 528 453" version="1.1" >
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="Desktop-HD-Copy-2" transform="translate(0.000000, -2550.000000)">
                         <g id="Group-4" transform="translate(0.000000, 2550.000000)">

@@ -24,10 +24,25 @@ import _VP from '../assets/images/dekstop/voip.js'
 import Service from './Service'
 
 const _WITH_=627;
-const windowWidth=window.innerWidth;
+let windowWidth=window.innerWidth;
+let responsiveMode=windowWidth<1400;
 const traingleHeight=70;
 
 class Home extends BaseComponent {
+
+
+    updateDimensions(){
+        windowWidth=window.innerWidth;
+        responsiveMode=windowWidth<1400;
+    }
+
+    componentDidMount(){
+        window.addEventListener("resize", this.updateDimensions);
+    }
+
+    componentWillUnmount(){
+        window.removeEventListener("resize", this.updateDimensions);
+    }
 
     render() {
         return (
@@ -39,8 +54,8 @@ class Home extends BaseComponent {
                    </div>
                 </div>
                 {/* Banner */}
-                <div className="p-20" style={{position:'relative',backgroundColor:'#fcf8f5',height: '573px'}} >
-                    <div className="container" style={{height: '600px',display:'flex',flexDirection:'row',position:'relative'}} >
+                <div className="p-20" style={{position:'relative',backgroundColor:'#fcf8f5'}} >
+                    <div className="container d-f-c-c"  >
                         <div className={"st-width"} 
                             style={{
                                 
@@ -81,17 +96,17 @@ class Home extends BaseComponent {
                 </div>
                 {/* pakt */}
                 <div id="pact" className="p-20 container">
-                    <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+                    <div className="d-f-c-c">
                         <p style={{fontSize:'50px'}}>
                         WE ARE HERE TO MAKE A PACT
                         </p>
                     </div>
-                    <div className="qsbr" style={{display:'flex',flexDirection:'row',}} >
+                    <div className="qsbr d-f-c-c">
                         <div className={"st-width"}>
                             <img className={"st-width"} src={About} alt="" />
                         </div>
                         <div className={"st-width"}>
-                            <img className={"st-width"} src={ManaBgBrown} alt="" style={{position:'absolute',right:'0px',top:`${_WITH_/3}px`}} />
+                            <img className={"st-width"} src={ManaBgBrown} alt="" style={{position:'absolute',right:'0px',}} />
                             <p style={{lineHeight:'30px',fontSize:'15px',margin:'50px',width:'500px',textAlign:'left'}}>
                             You probably have witnessed the digital age, changing every aspect of our lives (or at least you have heard about it, right?). Before this era, Businesses had to try out all the time and budget consuming ways to reach, attract and satisfy customers, and customers also struggled with finding the right product or service, that is just made for them and their needs. Today customers has several options availabe to them on online platforms, that allow them to compare and make a better decision, if a business is not online, then its not an option. Mana Group helps you to step towards digitalization and use innovation and technlogy to enhance your business. We call our method of working, “Proffesual” as in, “Proffesionally casual”. Let’s start a journy towards digital transformation together and we guarantee we will stick to you, ups and downs, thick and thin.
                             </p>
@@ -111,29 +126,31 @@ class Home extends BaseComponent {
                         description={`Dont mind the tk,tk,tk sound, its just our developers working super hard to bring your ideas to reality.`}
                         bg={ManaBgBlue}
                         image={_DV}
-
+                        responsiveMode
                     />
 
                      <Service
                         title={`User Exprience Design`}
                         description={`Fun Fact: every dollar invested in UX returns $10 to $100. SO… DONT EVEN RISK IT. Your users deserve an experience as easy and fun as your product. `}
                         image={_UX}
-                        flip
+                        flip={!responsiveMode}
+                        responsiveMode
                     />
                     
                     <Service
                         title={`User Interface Design`}
                         description={`Another Fun Fact: the first judgment always comes from the look of things. make your first impression count by creating a beautiful and intuitive product.`}
                         image={_UI}
-                        
+                        responsiveMode
                     />
                      <Service
                         title={`VoIP Solutions `}
                         description={`E-commerce sale is hard. Analyics, rates, ROl and etc. Don’t worry though, you dont have to do it alone. we got you covered. after all thats what friends are for.  `}
                         image={_VP}
                         bg={ManaBgBrown}
-                        flip
-                        flipBg
+                        flip={!responsiveMode}
+                        flipBg={!responsiveMode}
+                        responsiveMode
                     />  
                     
                 </div>
@@ -150,17 +167,21 @@ class Home extends BaseComponent {
                             Give us your info and we will get in touch
                         </p>
                     </div>
-                    <div style={{display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
-                        <div style={{width:'444px'}}>''
+                    <div className="d-f-c-c">
+                        <div style={{width:'444px'}}>
                             <img style={{width:'444px'}} src={Contact} alt=".." />
                         </div>
                         <div style={{width:'500px'}}>
-                            <div style={{display:'flex',flexDirection:'row'}}>
+                            <div className="d-f-c-c">
                                 <input id="name" className="inputs" type="text"  placeholder="Your Name" />
                                 <input id="phone" className="inputs" type="text"  placeholder="Your Phone Number" />
                             </div>
-                            <div style={{display:'flex',flexDirection:'row',paddingTop:'20px'}}>
-                                <input id="email" type="text"  placeholder="Your Email Address *" 
+                            <div className="d-f-c-c" style={!responsiveMode?{paddingTop:'20px'}:{}}>
+                                <input 
+                                className="inputs"
+                                id="email" 
+                                type="text"  
+                                placeholder="Your Email Address *" 
                                 style={{
                                     padding: '10px',
                                     margin: '5px',

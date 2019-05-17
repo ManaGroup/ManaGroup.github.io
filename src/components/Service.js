@@ -8,13 +8,16 @@ class App extends Component {
       // this.IMG =props.image;
         this.container=[
             <div className={"st-width"}>
-            <div style={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'flex-start'}} >
+            <div style={{
+                display:'flex',flexDirection:'column',justifyContent:'center',
+                alignItems:!props.responsiveMode?'flex-start':'center'
+            }} >
                 {props.flipBg && props.bg && <img src={props.bg} alt="" style={{width: '40%',paddingTop: '30px',
             
             position: 'absolute',right: 0,top: 0,
             }} />}
                 <p className="qsbrBold" style={{fontSize:'30px',lineHeight:'40px'}}>{props.title}</p>
-                <p className="qsbr" style={{fontSize:'20px'}}>{props.description}</p>
+                <p className="qsbr" style={{fontSize:'20px',textAlign:!props.responsiveMode?'left':'center'}}>{props.description}</p>
                 {!props.flipBg && props.bg && <img src={props.bg} alt="" style={{width: '40%',paddingTop: '30px',
             }}/>}
             </div>
@@ -36,7 +39,9 @@ class App extends Component {
 
   render() {
     return (
-        <div style={{paddingTop:'100px',paddingBottom:'100px',display:'flex',flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
+        <div 
+        className="d-f-c-c" 
+        style={{justifyContent:'space-between',paddingTop:'100px',paddingBottom:'100px',}}>
             {this.container}
         </div>
     )
