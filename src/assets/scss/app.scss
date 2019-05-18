@@ -1,24 +1,11 @@
 @import "general";
 @import "./color";
 @import "./mixins";
+
 .App {
   .main-container {}
 }
-.st-width{
-  //627 313
-  position: relative;
-  width: 500px;
-}
-.st2-width{
-  //627 313
-  position: relative;
-  width: 315px;
-}
-.st3-width{
-  //627 313
-  position: relative;
-  width: 210px;
-}
+
 .triangle-white{
   fill: rgb(255, 255, 255);
   stroke-width: 8;
@@ -51,6 +38,7 @@
   border-radius: 5px;
   border-width: 0px;
 }
+
 p{
   line-height: 1;
 }
@@ -61,14 +49,67 @@ p{
   align-items: center;
 }
 
-@media (min-width: 0px) {
+.header-title{
+  font-size: 50px;
+}
+
+.st-width{
+  position: relative;
+  width: 100%;
+}
+._90per{
+  width:90%;
+}
+._80per{
+  width:80%;
+}
+._60per{
+  width:60%;
+}
+._50per{
+  width:50%;
+}
+._40per{
+  width:40%;
+}
+._30per{
+  width:30%;
+}
+._20per{
+  width:20%;
+}
+._10per{
+  width:10%;
+}
+/////////////////
+@media (min-width: 320px) {
+  .container {
+    max-width: 300px;
+  }
+  .d-f-c-c{
+    flex-direction: column
+  }
+  .header-title{
+    font-size: 30px;
+    text-align: center;
+
+  }
+}
+/////////////////
+@media (min-width: 576px) {
   .container {
     max-width: 540px;
   }
   .d-f-c-c{
     flex-direction: column
   }
+  .header-title{
+    font-size: 30px;
+    text-align: center;
+
+  }
 }
+/////////////////
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
@@ -76,15 +117,24 @@ p{
   .d-f-c-c{
     flex-direction: column
   }
+  .header-title{
+    text-align: center;
+    font-size: 30px;
+  }
 }
+/////////////////
 @media (min-width: 992px) {
   .container {
     max-width: 960px;
   }
   .d-f-c-c{
-    flex-direction: column
+    flex-direction: row
+  }
+  .header-title{
+    font-size: 30px;
   }
 } 
+/////////////////
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
@@ -92,6 +142,11 @@ p{
   .d-f-c-c{
     flex-direction: row
   }
-
+  .header-title{
+    font-size: 50px;
+  }
 }
-
+/////////////////
+.f-d-c{
+  flex-direction: column;
+}
