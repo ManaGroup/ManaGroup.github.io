@@ -249,23 +249,24 @@ class Home extends BaseComponent {
                     </div>
                 </div>
                 {/* footer */}
-                <div className="container d-f-c-c" style={{display:'flex',justifyContent:'flex-start',alignItems:'center'}} >
+                <div style={{backgroundColor:'#fcf8f5',width:'100%'}}>
+                    <div className="container d-f-c-c qsbr" style={{backgroundColor:'#fcf8f5',display:'flex',justifyContent:'flex-start',alignItems:'center'}} >
                      
-                     <div className="d-f-c-c p-20" style={responsiveMode?{flexDirection:'row',padding:'0px',width:'100%',justifyContent:'space-between',textAlign:'right'}:{}}>
+                     <div className="d-f-c-c p-20" style={responsiveMode?{flexDirection:'row',padding:'0px',width:'100%',justifyContent:'flex-start',textAlign:'right'}:{}}>
                          <img src={MAPS} alt=""/>
                          <p className=" p-20" >{`No 36,Esfandiar Blvd, Vali-E-Asr St,Tehran-Iran`}</p>  
                      </div>
                      
                      <div/>
                      
-                     <div className="d-f-c-c p-20" style={responsiveMode?{flexDirection:'row',padding:'0px',width:'100%',justifyContent:'space-between',textAlign:'right'}:{}}>
+                     <div className="d-f-c-c p-20" style={responsiveMode?{flexDirection:'row',padding:'0px',width:'100%',justifyContent:'flex-start',textAlign:'right'}:{}}>
                         <img src={CALLANSWER} alt=""/>
                         <p className=" p-20" >+9821 42473000</p>   
                      </div>
 
                      <div/>
 
-                     <div className="d-f-c-c p-20" style={responsiveMode?{flexDirection:'row',padding:'0px',width:'100%',justifyContent:'space-between',textAlign:'right'}:{}}>
+                     <div className="d-f-c-c p-20" style={responsiveMode?{flexDirection:'row',padding:'0px',width:'100%',justifyContent:'flex-start',textAlign:'right'}:{}}>
                        <img src={ENVELOP} alt=""/>                         
                         <p className=" p-20" >info@managroup.co</p>   
                      </div>
@@ -273,17 +274,18 @@ class Home extends BaseComponent {
                      <div/>
 
                      {responsiveMode && 
-                     <div className="d-f-c-c p-20" style={responsiveMode?{flexDirection:'row',padding:'0px',width:'100%',justifyContent:'space-between',textAlign:'right'}:{}}>
+                     <div className="d-f-c-c p-20" style={responsiveMode?{flexDirection:'row',padding:'0px',width:'100%',justifyContent:'flex-start',textAlign:'right'}:{}}>
                        <img src={LINKEDIN} alt=""/>    
                        <p className=" p-20"></p>
                      </div>}
 
                      {!responsiveMode && 
-                     <div style={{position:'absolute',right:'20px'}}>
-                        <img src={LINKEDIN} alt=""/>                         
-                     </div>
-                     }
+                     <div className="d-f-c-c p-20" style={responsiveMode?{flexDirection:'row',padding:'0px',width:'100%',justifyContent:'flex-start',textAlign:'right'}:{position:'absolute',right:'0px'}}>
+                       <img src={LINKEDIN} alt=""/>    
+                       <p className=" p-20"></p>
+                     </div>}
                 </div>           
+                </div>
             </div>
         );
     }
