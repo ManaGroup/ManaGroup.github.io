@@ -81,6 +81,11 @@ p{
 ._10per{
   width:10%;
 }
+
+
+
+
+
 /////////////////
 @media (min-width: 320px) {
   .container {
@@ -147,6 +152,10 @@ p{
   }
 }
 /////////////////
+
+.container{
+  position: relative;
+}
 .f-d-c{
   flex-direction: column;
 }

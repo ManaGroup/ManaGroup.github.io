@@ -14,7 +14,6 @@ class App extends Component {
                 }} >
                     {!props.responsiveMode && props.flipBg && props.bg && <img src={props.bg} alt="" style={{
                         width: '40%', paddingTop: '30px',
-
                         position: 'absolute', right: 0, top: 0,
                     }} />}
                     <p className="qsbrBold header-title" style={{ lineHeight: '40px' }}>{props.title}</p>

@@ -4,6 +4,7 @@ import BaseComponent from './BaseComponent';
 
 import Banner       from '../assets/images/dekstop/header.svg'
 import ManaLogo     from '../assets/images/dekstop/logo.svg'
+import ManaLogoPNG     from '../assets/images/dekstop/logo.png'
 import About        from '../assets/images/dekstop/about.svg'
 import Contact      from '../assets/images/dekstop/contact.svg'
 import ManaBgBlue   from '../assets/images/dekstop/mana-bg-blue.svg'
@@ -15,6 +16,11 @@ import _UI from '../assets/images/dekstop/ui.js'
 import _UX from '../assets/images/dekstop/ux.js'
 import _DV from '../assets/images/dekstop/develop.js'
 import _VP from '../assets/images/dekstop/voip.js'
+
+import ENVELOP from '../assets/images/dekstop/black-envelope.svg'
+import CALLANSWER from '../assets/images/dekstop/call-answer.svg'
+import LINKEDIN from '../assets/images/dekstop/linkedin.svg'
+import MAPS from '../assets/images/dekstop/maps.svg'
 
 import Service from './Service'
 
@@ -48,7 +54,7 @@ class Home extends BaseComponent {
                 {/* Logo */}
                 <div className="p-20" style={{display:'flex',flexDirection:'row',backgroundColor:'#fcf8f5'}}>
                    <div className="container">
-                    <img src={ManaLogo} alt=""/> 
+                    <img src={ManaLogoPNG} alt=""/> 
                    </div>
                 </div>
                 {/* Banner */}
@@ -122,31 +128,31 @@ class Home extends BaseComponent {
                         description={`Dont mind the tk,tk,tk sound, its just our developers working super hard to bring your ideas to reality.`}
                         bg={ManaBgBlue}
                         image={_DV}
-                        responsiveMode
+                        responsiveMode={responsiveMode}
                     />
 
                      <Service
                         title={`User Exprience Design`}
                         description={`Fun Fact: every dollar invested in UX returns $10 to $100. SO… DONT EVEN RISK IT. Your users deserve an experience as easy and fun as your product. `}
                         image={_UX}
-                        flip={!responsiveMode}
-                        responsiveMode
+                        flip
+                        responsiveMode={responsiveMode}
                     />
                     
                     <Service
                         title={`User Interface Design`}
                         description={`Another Fun Fact: the first judgment always comes from the look of things. make your first impression count by creating a beautiful and intuitive product.`}
                         image={_UI}
-                        responsiveMode
+                        responsiveMode={responsiveMode}
                     />
                      <Service
                         title={`VoIP Solutions `}
                         description={`E-commerce sale is hard. Analyics, rates, ROl and etc. Don’t worry though, you dont have to do it alone. we got you covered. after all thats what friends are for.  `}
                         image={_VP}
                         bg={ManaBgBrown}
-                        flip={!responsiveMode}
-                        flipBg={!responsiveMode}
-                        responsiveMode
+                        flip
+                        flipBg
+                        responsiveMode={responsiveMode}
                     />  
                     
                 </div>
@@ -154,7 +160,7 @@ class Home extends BaseComponent {
                 <svg height={traingleHeight} width={windowWidth} style={{position:'relative',bottom:'-10px',left:'0px',borderBottom: '1px solid #1862b5;'}}>
                             <polygon points={`0,0 0,${traingleHeight} ${windowWidth},${traingleHeight}`} class="triangle-blue" />
                 </svg>
-                {/* footer */}
+                {/* contact us */}
                 <div style={{width:'100%',backgroundColor:'#1862b5'}}>
                     <div className="container p-20">
                         <div style={{color:'white',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',paddingBottom:'50px'}}>
@@ -242,7 +248,42 @@ class Home extends BaseComponent {
                         </div>
                     </div>
                 </div>
+                {/* footer */}
+                <div className="container d-f-c-c" style={{display:'flex',justifyContent:'flex-start',alignItems:'center'}} >
+                     
+                     <div className="d-f-c-c p-20" style={responsiveMode?{flexDirection:'row',padding:'0px',width:'100%',justifyContent:'space-between',textAlign:'right'}:{}}>
+                         <img src={MAPS} alt=""/>
+                         <p className=" p-20" >{`No 36,Esfandiar Blvd, Vali-E-Asr St,Tehran-Iran`}</p>  
+                     </div>
+                     
+                     <div/>
+                     
+                     <div className="d-f-c-c p-20" style={responsiveMode?{flexDirection:'row',padding:'0px',width:'100%',justifyContent:'space-between',textAlign:'right'}:{}}>
+                        <img src={CALLANSWER} alt=""/>
+                        <p className=" p-20" >+9821 42473000</p>   
+                     </div>
 
+                     <div/>
+
+                     <div className="d-f-c-c p-20" style={responsiveMode?{flexDirection:'row',padding:'0px',width:'100%',justifyContent:'space-between',textAlign:'right'}:{}}>
+                       <img src={ENVELOP} alt=""/>                         
+                        <p className=" p-20" >info@managroup.co</p>   
+                     </div>
+
+                     <div/>
+
+                     {responsiveMode && 
+                     <div className="d-f-c-c p-20" style={responsiveMode?{flexDirection:'row',padding:'0px',width:'100%',justifyContent:'space-between',textAlign:'right'}:{}}>
+                       <img src={LINKEDIN} alt=""/>    
+                       <p className=" p-20"></p>
+                     </div>}
+
+                     {!responsiveMode && 
+                     <div style={{position:'absolute',right:'20px'}}>
+                        <img src={LINKEDIN} alt=""/>                         
+                     </div>
+                     }
+                </div>           
             </div>
         );
     }
