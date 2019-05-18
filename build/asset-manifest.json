@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.fd00c64a.css",
   "main.css.map": "static/css/main.fd00c64a.css.map",
-  "main.js": "static/js/main.1f1b5a8e.js",
-  "main.js.map": "static/js/main.1f1b5a8e.js.map",
+  "main.js": "static/js/main.940ecd32.js",
+  "main.js.map": "static/js/main.940ecd32.js.map",
   "static/media/Debussy.eot": "static/media/Debussy.f1d16d9c.eot",
   "static/media/Debussy.ttf": "static/media/Debussy.8b15b62e.ttf",
   "static/media/Debussy.woff": "static/media/Debussy.f01ea84d.woff",
@@ -24,14 +24,9 @@
   "static/media/Vazir.woff": "static/media/Vazir.5c7abcf1.woff",
   "static/media/Vazir.woff2": "static/media/Vazir.db055c88.woff2",
   "static/media/about.svg": "static/media/about.5ffcb98b.svg",
-  "static/media/clients.svg": "static/media/clients.dad74014.svg",
   "static/media/contact.svg": "static/media/contact.d04f36ab.svg",
-  "static/media/develop.svg": "static/media/develop.cf68f398.svg",
   "static/media/header.svg": "static/media/header.8ebe83dd.svg",
   "static/media/logo.svg": "static/media/logo.540aaa48.svg",
   "static/media/mana-bg-blue.svg": "static/media/mana-bg-blue.8a5aa097.svg",
-  "static/media/mana-bg-brown.svg": "static/media/mana-bg-brown.32841b28.svg",
-  "static/media/ui.svg": "static/media/ui.2671c995.svg",
-  "static/media/ux.svg": "static/media/ux.012a3fcf.svg",
-  "static/media/voip.svg": "static/media/voip.fca21cde.svg"
+  "static/media/mana-bg-brown.svg": "static/media/mana-bg-brown.32841b28.svg"
 }
