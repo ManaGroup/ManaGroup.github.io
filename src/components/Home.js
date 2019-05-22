@@ -35,6 +35,10 @@ class Home extends BaseComponent {
         this.forceUpdate();
     }
 
+    navToLnk=()=>{
+        window.location='https://www.linkedin.com/company/managroupco/';
+    }
+
     componentDidMount() {
         window.addEventListener("resize", this.updateDimensions);
     }
@@ -143,7 +147,7 @@ class Home extends BaseComponent {
                     />
                     <Service
                         title={`VoIP Solutions `}
-                        description={`E-commerce sale is hard. Analyics, rates, ROl and etc. Don’t worry though, you dont have to do it alone. we got you covered. after all thats what friends are for.  `}
+                        description={`Never underestimate the power of a sweet conversation. We implement your service on telephone system to bring your customers a smooth and easy communication.  `}
                         image={_VP}
                         bg={ManaBgBrown}
                         flip
@@ -176,10 +180,10 @@ class Home extends BaseComponent {
                                 </div>
                             }
                             <div className="_20per" />
-                            <div className="_60per">
+                            <div className={responsiveMode?"_100per":"_60per"}>
                                 <div className="d-f-c-c">
-                                    <input id="name" className="inputs" type="text" placeholder="Your Name" />
-                                    <input id="phone" className="inputs" type="text" placeholder="Your Phone Number" />
+                                    <input id="name"   style={responsiveMode?{width:'100%'}:{}} className="inputs" type="text" placeholder="Your Name" />
+                                    <input id="phone" className="inputs" style={responsiveMode?{width:'100%'}:{}} type="text" placeholder="Your Phone Number" />
                                 </div>
                                 <div className="d-f-c-c" style={!responsiveMode ? { paddingTop: '20px' } : {}}>
                                     <input
@@ -190,7 +194,7 @@ class Home extends BaseComponent {
                                         style={{
                                             padding: '10px',
                                             margin: '5px',
-                                            width: '700px',
+                                            width: responsiveMode?'100%':'550px',
                                             height: '76px',
                                             borderRadius: '5px',
                                             borderWidth: '0px',
@@ -218,7 +222,7 @@ class Home extends BaseComponent {
                                                 alert('Your Email Has Been Send. :)')
                                             })
                                         }}
-                                        className="inputs"
+                                        className="inputs trident"
                                         type="button"
                                         value="Send"
                                         style={{
@@ -226,7 +230,7 @@ class Home extends BaseComponent {
                                             border: 'none',
                                             backgroundColor: 'rgb(201, 152, 103)',
                                             height: '76px',
-                                            width: '206px',
+                                            width: responsiveMode?'100%':'206px',
                                             fontFamily: 'qsbr',
                                             fontSize: '20px',
                                             color: 'white',
@@ -254,7 +258,7 @@ class Home extends BaseComponent {
                             responsiveMode &&
                             <React.Fragment >
                                 <div className="d-f-c-c p-20-20 f-d-c a-i-fs mt20" style={responsiveMode ? { flexDirection: 'row', padding: '0px', width: '100%', justifyContent: 'flex-start', textAlign: 'right' } : {}}>
-                                    <p className=" p-20-20 bg-y">Address:</p>
+                                    <p className=" p-20-20 bg-y qsbrBold">Address:</p>
                                     <p className=" p-20-20" style={{padding:'0px'}} >{`No 36,Esfandiar Blvd, Vali-E-Asr St,Tehran-Iran`}</p>
                                 </div>
 
@@ -263,12 +267,12 @@ class Home extends BaseComponent {
                                 <div className={`d-f-c-c p-20-20  a-i-fs `} style={responsiveMode ? { flexDirection: windowWidth<350 ? 'column': 'row', padding: '0px', width: '100%', justifyContent: 'flex-start', textAlign: 'right' } : {}}>
 
                                     <div className="d-f-c-c p-20-20 f-d-c a-i-fs mt20" style={responsiveMode ? { flexDirection: windowWidth<350 ?'row': 'column', padding: '0px', width: '100%', justifyContent: 'flex-start', textAlign: 'right' } : {}}>
-                                        <p className=" p-20-20 bg-y">Phone Number:</p>
+                                        <p className=" p-20-20 bg-y qsbrBold">Phone Number:</p>
                                         <p className=" p-20-20" >+9821 42473000</p>
                                     </div>
 
                                     <div className="d-f-c-c p-20-20 f-d-c a-i-fs mt20" style={responsiveMode ? { flexDirection: windowWidth<350 ?'row': 'column', padding: '0px', width: '100%', justifyContent: 'flex-start', textAlign: 'right' } : {}}>
-                                        <p className=" p-20-20 bg-y">Email Address:</p>
+                                        <p className=" p-20-20 bg-y qsbrBold">Email Address:</p>
                                         <p className=" p-20-20" >info@managroup.co</p>
                                     </div>
 
@@ -284,26 +288,26 @@ class Home extends BaseComponent {
                         {!responsiveMode &&
                             <React.Fragment>
                                 <div className="d-f-c-c p-20-20 f-d-c a-i-fs mt20" style={responsiveMode ? { flexDirection: 'row', padding: '0px', width: '100%', justifyContent: 'flex-start', textAlign: 'right' } : {}}>
-                                    <p className=" p-20-20 bg-y">Address:</p>
+                                    <p className=" p-20-20 bg-y qsbrBold">Address:</p>
                                     <p className=" p-20-20" >{`No 36,Esfandiar Blvd, Vali-E-Asr St,Tehran-Iran`}</p>
                                 </div>
 
                                 <div />
 
                                 <div className="d-f-c-c p-20-20 f-d-c a-i-fs mt20" style={responsiveMode ? { flexDirection: 'row', padding: '0px', width: '100%', justifyContent: 'flex-start', textAlign: 'right' } : {}}>
-                                    <p className=" p-20-20 bg-y">Phone Number:</p>
+                                    <p className=" p-20-20 bg-y qsbrBold">Phone Number:</p>
                                     <p className=" p-20-20" >+9821 42473000</p>
                                 </div>
 
                                 <div />
 
                                 <div className="d-f-c-c p-20-20 f-d-c a-i-fs mt20" style={responsiveMode ? { flexDirection: 'row', padding: '0px', width: '100%', justifyContent: 'flex-start', textAlign: 'right' } : {}}>
-                                    <p className=" p-20-20 bg-y">Email Address:</p>
+                                    <p className=" p-20-20 bg-y qsbrBold">Email Address:</p>
                                     <p className=" p-20-20" >info@managroup.co</p>
                                 </div>
 
                                 <div className="d-f-c-c p-20 f-d-c mt20" style={responsiveMode ? { flexDirection: 'row', padding: '0px', width: '100%', justifyContent: 'flex-start', textAlign: 'right' } : { position: 'absolute', right: '0px' }}>
-                                    <img src={LINKEDIN} alt="" />
+                                    <img src={LINKEDIN} alt="" onClick={this.navToLnk} />
                                 </div>
                             </React.Fragment>
                         }
@@ -320,7 +324,7 @@ class Home extends BaseComponent {
                     responsiveMode && 
                     <div style={{width:'100%',backgroundColor:'#fcf8f5',paddingBottom:'10px'}}>
                         <div  style={{ display:'flex',flexDirection:'row',justifyContent:'space-between',alignItems:'center',fontSize: '10px', backgroundColor: '#fcf8f5' }}>
-                            <img src={LINKEDIN} alt="" style={{paddingLeft:'10px'}} />
+                            <img src={LINKEDIN} alt="" style={{paddingLeft:'10px'}} onClick={this.navToLnk} />
                             <p className="qsbr" style={{paddingRight:'10px'}}>Made with ❤️ , 💪🏻 and ☕️ by Mana Group</p>
                         </div>
                     </div>

@@ -33,7 +33,7 @@
 .inputs{
   padding: 10px;
   margin: 5px;
-  width:344px !important;
+  width:344px ;
   height:76px !important;
   border-radius: 5px;
   border-width: 0px;
@@ -56,6 +56,9 @@ p{
 .st-width{
   position: relative;
   width: 100%;
+}
+._100per{
+  width:100%;
 }
 ._90per{
   width:90%;
@@ -84,6 +87,20 @@ p{
 
 
 
+/////////////////
+@media (min-width: 0px) {
+  .container {
+    max-width: 150px;
+  }
+  .d-f-c-c{
+    flex-direction: column
+  }
+  .header-title{
+    font-size: 20px;
+    text-align: center;
+
+  }
+}
 
 
 /////////////////
@@ -171,4 +188,25 @@ p{
 }
 .mt20{
   margin-top: 20px;
+}
+::-o-trident{
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(201, 152, 103);
+  height: 76px;
+  font-family: 'qsbr';
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+.trident{
+  
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(201, 152, 103);
+  height: 76px;
+  font-family: 'qsbr';
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
 }

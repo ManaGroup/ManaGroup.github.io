@@ -7,7 +7,7 @@ class App extends Component {
         super(props);
         // this.IMG =props.image;
         this.container = [
-            <div className={"st-width"}>
+            <div className={"st-width"} style={{flex:2}}>
                 <div style={{
                     display: 'flex', flexDirection: 'column', justifyContent: 'center',
                     alignItems: !props.responsiveMode ? 'flex-start' : 'center'
@@ -16,7 +16,7 @@ class App extends Component {
                         width: '40%', paddingTop: '30px',
                         position: 'absolute', right: 0, top: 0,
                     }} />}
-                    <p className="qsbrBold header-title" style={{ lineHeight: '40px' }}>{props.title}</p>
+                    <p className="qsbrBold header-title" style={{ lineHeight: '65px' }}>{props.title}</p>
                     <p className="qsbr " style={{ fontSize: '20px', textAlign: !props.responsiveMode ? 'left' : 'center' }}>{props.description}</p>
                     {!props.responsiveMode && !props.flipBg && props.bg && <img src={props.bg} alt="" style={{
                         width: '40%', paddingTop: '30px',
@@ -24,7 +24,9 @@ class App extends Component {
                 </div>
             </div>
             ,
-            <div style={{width:'70%'}}  >
+            <div style={{display:'flex',flex:0.5}}/> 
+            ,
+            <div style={{width:'70%',flex:2}}  >
                 
                 {
                     (() => {
