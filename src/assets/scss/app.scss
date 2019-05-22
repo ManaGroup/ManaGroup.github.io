@@ -6,6 +6,12 @@
   .main-container {}
 }
 
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .triangle-white{
   fill: rgb(255, 255, 255);
   stroke-width: 8;
