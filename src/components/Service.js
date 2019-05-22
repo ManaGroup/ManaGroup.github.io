@@ -36,10 +36,8 @@ class App extends Component {
         ];
         if(!props.responsiveMode){
             props.flip && (this.container = this.container.reverse());
-            console.log('i r')
         }  else{
             this.container = this.container.reverse();
-            console.log('n r')
         }
     }
 
