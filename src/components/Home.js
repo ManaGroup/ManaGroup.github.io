@@ -224,7 +224,7 @@ class Home extends BaseComponent {
                                                 })
                                             }).then(() => {
                                                 alert('Your Email Has Been Send. :)')
-                                            })
+                                            }).catch(e=>alert('oops , there was some error :('))
                                         }}
                                         className="inputs trident"
                                         type="button"
