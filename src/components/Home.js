@@ -209,7 +209,7 @@ class Home extends BaseComponent {
                                                 alert('please fill all form data ')
                                                 return;
                                             }
-                                            fetch('https://5.160.25.147:1414/api/register/email', {
+                                            fetch('https://solabest.ddns.net:1414/api/register/email-mana', {
                                                 method: 'POST',
                                                 body: JSON.stringify({
                                                     email:
