@@ -211,6 +211,10 @@ class Home extends BaseComponent {
                                             }
                                             fetch('https://solabest.ddns.net:1414/api/register/email-mana', {
                                                 method: 'POST',
+                                                headers:{
+                                                    'Content-Type':'application/json',
+                                                    'Accept':'application/json'
+                                                },
                                                 body: JSON.stringify({
                                                     email:
 
