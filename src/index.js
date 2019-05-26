@@ -16,7 +16,7 @@ export const store = configureStore();
 ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter>
-                <Route name="App" path="/" render={(props) => <App {...props} />} />
+                <Route name="App" path="*" render={(props) => <App {...props} />} />
         </BrowserRouter>
     </Provider>,
     document.getElementById('root'));
